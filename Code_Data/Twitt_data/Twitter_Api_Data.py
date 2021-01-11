@@ -3,13 +3,9 @@ import numpy as np
 from tweepy.streaming import StreamListener # for streamming data from the twitter
 from tweepy import OAuthHandler # to authenticate the access
 from tweepy import Stream
-import Twitter_credential # that where I created the authentication secet key
-
+import Twitter_credential # hidden authentication secet key file
 
 # Twitter Client
-
-
-
 #This handle twitter authentication and connection to the twitter
 
 class TwitterStreammer():
@@ -29,9 +25,6 @@ class TwitterStreammer():
 
         stream.filter(track= hash_tag_list)
 
-
-
-
 class StdOutListener (StreamListener): # StreamListener obj is passed from the tweep.streamming module
     """
     listener class to print out the streamed live tweet
@@ -45,9 +38,6 @@ class StdOutListener (StreamListener): # StreamListener obj is passed from the t
             tf.write(data)
         return True
 
-
-
-
     def on_error(self, status):
         print(status)
 
@@ -56,8 +46,8 @@ if __name__== "__main__":
     hash_tag_list = ["bitcoin"]# create the list for twitter hash tag
 
     fetched_tweets_filename = "tweets.json"
-    #twitter_Streamer = TwitterStreammer()
-   # twitter_Streamer.stream_tweets( fetched_tweets_filename,hash_tag_list)
+    twitter_Streamer = TwitterStreammer()
+    twitter_Streamer.stream_tweets( fetched_tweets_filename,hash_tag_list)
 
 
 
