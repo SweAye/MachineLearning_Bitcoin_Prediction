@@ -4,8 +4,6 @@ import Twitter_credential
 from tweepy import OAuthHandler
 from tweepy import Stream
 
-
-
 #This is a basic listener that just prints received tweets to stdout.
 class StdOutListener(StreamListener):
 
@@ -15,7 +13,6 @@ class StdOutListener(StreamListener):
 
     def on_error(self, status):
         print (status)
-
 
 if __name__ == '__main__':
 
@@ -27,4 +24,4 @@ if __name__ == '__main__':
 
     #This line filter Twitter Streams to capture data by the keywords: 'python', 'javascript', 'ruby'
     stream.filter(track=['bitcoin','currency'])
-# this streamming is captured from command line redirection to the "tweet_data_testing.txt file "
+    # this streamming is captured from command line redirection to the "tweet_data_testing.txt file "
