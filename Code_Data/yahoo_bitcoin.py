@@ -10,10 +10,8 @@ This program will live stream from the yahoo finical anaylis of bitcoin value in
 - visualization
 - use lineregression graph to compare the predicted data and real data (from the same website, same data as prediction)
 - show accurency rate for the predicted data compare with algorithm accurency vs real data predition
-
-
 quandl API call, with APIkey( go back to the quandle.py and test again)
-https://www.quandl.com/api/v3/datasets/BCHAIN/MKPRU.json?api_key=FE2iNsurxQjRHbvScnLk
+https://www.quandl.com/api/v3/datasets/BCHAIN/MKPRU.json?api_key=""
 """
 from sklearn import svm
 import quandl
